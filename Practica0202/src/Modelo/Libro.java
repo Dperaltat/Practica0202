@@ -42,10 +42,6 @@ public abstract class Libro {
 	public double getPrecio() {
 		return precio;
 	}
-
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}
 	
 	public abstract void calcularPrecio(double valor, double comision);
 	

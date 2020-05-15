@@ -1,39 +1,19 @@
 package Modelo;
 
-public class Credito {
+public class Credito extends Calcu_Saldo{
 	
-	private double saldo;
-	private Usuario usu;
-	
-	public Credito(double saldo, Usuario usu) {
-		super();
-		this.saldo = saldo;
-		this.usu = usu;
-	}
+	private int id;
 
-	public Credito() {
-		
+	public Credito(int id) {
+		super(id);
 	}
 	
-	public double getSaldo() {
-		return saldo;
+	public int getId() {
+		return id;
 	}
 
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
-	}
-
-	public Usuario getUsu() {
-		return usu;
-	}
-
-	public void setUsu(Usuario usu) {
-		this.usu = usu;
-	}
-
-	@Override
-	public String toString() {
-		return "Credito [saldo=" + saldo + ", usu=" + usu + "]";
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	
