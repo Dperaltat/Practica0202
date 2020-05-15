@@ -1,32 +1,18 @@
 package Modelo;
 
-public class Libro {
+public abstract class Libro {
 	
-	private int id;
 	private String titulo;
-	private String autor;
-	private String Edicion;
-	private int precio;
+	private String auto;
+	private String edicon;
+	protected double precio;
 	
-	public Libro(int id, String titulo, String autor, String edicion, int precio) {
+	public Libro(String titulo, String auto, String edicon, double precio) {
 		super();
-		this.id = id;
 		this.titulo = titulo;
-		this.autor = autor;
-		Edicion = edicion;
+		this.auto = auto;
+		this.edicon = edicon;
 		this.precio = precio;
-	}
-	
-	public Libro() {
-		
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getTitulo() {
@@ -37,36 +23,33 @@ public class Libro {
 		this.titulo = titulo;
 	}
 
-	public String getAutor() {
-		return autor;
+	public String getAuto() {
+		return auto;
 	}
 
-	public void setAutor(String autor) {
-		this.autor = autor;
+	public void setAuto(String auto) {
+		this.auto = auto;
 	}
 
-	public String getEdicion() {
-		return Edicion;
+	public String getEdicon() {
+		return edicon;
 	}
 
-	public void setEdicion(String edicion) {
-		Edicion = edicion;
+	public void setEdicon(String edicon) {
+		this.edicon = edicon;
 	}
 
-	public int getPrecio() {
+	public double getPrecio() {
 		return precio;
 	}
 
-	public void setPrecio(int precio) {
+	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
-
-	@Override
-	public String toString() {
-		return "Libro [id=" + id + ", titulo=" + titulo + ", autor=" + autor + ", Edicion=" + Edicion + ", precio="
-				+ precio + "]";
-	}
-
 	
-}
+	public abstract void calcularPrecio(double valor, double comision);
+	
+	
+	
 
+}
