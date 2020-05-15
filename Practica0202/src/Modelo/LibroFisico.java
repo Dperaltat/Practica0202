@@ -1,4 +1,4 @@
-package Practica0202.src.Modelo;
+package Modelo;
 
 public class LibroFisico extends Libro {
 

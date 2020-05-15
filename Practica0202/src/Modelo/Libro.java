@@ -3,16 +3,16 @@ package Modelo;
 public abstract class Libro {
 	
 	private String titulo;
-	private String auto;
+	private String autor;
 	private String edicon;
 	protected double precio;
 	
-	public Libro(String titulo, String auto, String edicon, double precio) {
+	public Libro(String titulo, String auto, String edicon) {
 		super();
 		this.titulo = titulo;
-		this.auto = auto;
+		this.autor = auto;
 		this.edicon = edicon;
-		this.precio = precio;
+	
 	}
 
 	public String getTitulo() {
@@ -24,11 +24,11 @@ public abstract class Libro {
 	}
 
 	public String getAuto() {
-		return auto;
+		return autor;
 	}
 
 	public void setAuto(String auto) {
-		this.auto = auto;
+		this.autor = auto;
 	}
 
 	public String getEdicon() {
